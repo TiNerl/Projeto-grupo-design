@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório de Recursos JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="header">
+    <div class="header-left">
+      <h1>Laboratório de Recursos JavaScript</h1>
+      <p class="subtitle">Desenvolvedor Frontend Sênior &nbsp;·&nbsp; UI/UX Moderno &nbsp;·&nbsp; Dark Mode</p>
+    </div>
+    <nav class="nav-links">
+      <a href="#dom" class="active">📦 Dom &amp; Manipulação</a>
+      <a href="#fetch">📡 Fetch API &amp; Async-Await</a>
+      <a href="#webstorage">💾 Web Storage</a>
+      <a href="#geolocation">🌍 Geolocation API</a>
+      <a href="#intersection">🔘 Intersection Observer</a>
+      <a href="#destructure">🧩 Desestruturação &amp; Spread</a>
+      <a href="#arrays">📊 Map &amp; Reduce</a>
+    </nav>
+  </header>
+
+  <!-- ===== DASHBOARD CARD GRID ===== -->
+  <main id="dashboard">
+
+    <!-- Card 1: DOM Manipulation -->
+    <section id="dom" class="card-section">
+      <h2>🪵 Manipulação do DOM</h2>
+      <p class="desc">Elementos, seletores, atributos e manipulação direta da estrutura HTML.</p>
+      <div id="playground-dom" class="playground"></div>
+      <button id="btn-view-dom" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 2: Fetch API / Async-Await -->
+    <section id="fetch" class="card-section">
+      <h2>📡 Fetch API &amp; Async-Await</h2>
+      <p class="desc">Requisições HTTP, JSON, caching e tratamento de erros assíncronos.</p>
+      <div id="playground-fetch" class="playground"></div>
+      <button id="btn-view-fetch" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 3: Web Storage -->
+    <section id="webstorage" class="card-section">
+      <h2>💾 Web Storage</h2>
+      <p class="desc">localStorage, sessionStorage e cookies — persistência no navegador.</p>
+      <div id="playground-webstorage" class="playground"></div>
+      <button id="btn-view-storage" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 4: Geolocation API -->
+    <section id="geolocation" class="card-section">
+      <h2>🌍 Geolocation API</h2>
+      <p class="desc">Acessar coordenadas do usuário com o consentimento explícito.</p>
+      <div id="playground-geo" class="playground"></div>
+      <button id="btn-view-geo" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 5: Intersection Observer -->
+    <section id="intersection" class="card-section">
+      <h2>🔘 Intersection Observer</h2>
+      <p class="desc">Carregar elementos ao entrar na tela para otimizar performance.</p>
+      <div id="playground-obs" class="playground"></div>
+      <button id="btn-view-obs" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 6: Destructuring & Spread -->
+    <section id="destructure" class="card-section">
+      <h2>🧩 Desestruturação &amp; Spread Operator</h2>
+      <p class="desc">Extrair propriedades, criar novos arrays e espalhar valores em objetos.</p>
+      <div id="playground-destruct" class="playground"></div>
+      <button id="btn-view-destruct" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+    <!-- Card 7: Map & Reduce -->
+    <section id="arrays" class="card-section">
+      <h2>📊 Map &amp; Reduce</h2>
+      <p class="desc">Transformações de coleções com map, filter, reduce, sort e chaves.</p>
+      <div id="playground-arrays" class="playground"></div>
+      <button id="btn-view-arrays" class="btn-primary btn-sm">Ver Código Fonte</button>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2026 Laboratório de Recursos JavaScript — All rights reserved.</p>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+/* ===== style.css — Laboratório de Recursos JavaScript ===== */
+/* Dark theme, modern UI inspired by MDN/Tailwind, responsive */
+
+/* --- Reset & Base --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  height: 100%;
+  font-family: "Inter", "JetBrains Mono", "SF Mono", "SF Pro Display",
+    "Segoe UI", system-ui, sans-serif;
+  line-height: 1.5;
+  background: #0d0e14;
+  color: #e6e6e6;
+  scroll-behavior: smooth;
+}
+
+/* --- Variables --- */
+:root {
+  --bg-primary: #0d0e14;
+  --bg-secondary: #1a1c22;
+  --border-color: #333333;
+  --primary: #fbbf24;
+  --primary-accent: #ffc64f;
+  --secondary: #0ea5e9;
+  --secondary-accent: #5fe3ff;
+  --text-primary: #ffffff;
+  --text-secondary: #9ba5b7;
+  --danger: #d03030;
+  --shadow: 0 4px 12px rgba(0,0,0,0.5);
+  --radius: 12px;
+  --radius-lg: 24px;
+  --gap: 16px;
+  --nav-height: 72px;
+}
+
+/* --- Header / Navbar --- */
+.header {
+  background: var(--bg-primary);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid var(--border-color);
+  padding: 0 var(--gap);
+  height: var(--nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+.header-left h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.header-left .subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary);
+  background: rgba(255,255,255,0.05);
+  border-color: var(--primary);
+}
+
+/* --- Dashboard Grid --- */
+main#dashboard {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  padding: 0 var(--gap);
+}
+
+/* --- Card Section --- */
+.card-section {
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--gap);
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.card-section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.8), 0 0 20px rgba(251,191,36,0.15);
+  border-color: var(--primary);
+}
+
+.card-section h2 {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+.card-section .desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--gap);
+  line-height: 1.5;
+}
+
+/* --- Playground / Interactive Area --- */
+.playground {
+  min-height: 140px;
+  background: rgba(0,0,0,0.4);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.playground:hover {
+  border-color: var(--primary-accent);
+}
+
+/* --- Controls Row --- */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* --- Button --- */
+.btn {
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.btn:hover {
+  background: var(--primary);
+  color: #000;
+  border-color: var(--primary);
+}
+.btn-primary {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.btn-primary:hover {
+  background: var(--primary);
+  color: #000;
+}
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+}
+
+/* --- Console / Log --- */
+.log, .console {
+  background: rgba(0,0,0,0.5);
+  color: var(--success);
+  font-family: "JetBrains Mono", "Fira Code", "Menlo", monospace;
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  font-size: 0.85rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 0.8rem;
+}
+.console {
+  color: var(--secondary);
+  background: rgba(0,0,0,0.6);
+}
+
+/* --- Footer --- */
+.footer {
+  background: var(--bg-primary);
+  border-top: 2px solid var(--border-color);
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* --- Utility Classes --- */
+.hidden { display: none; }
+.no-select { user-select: none; }
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  main#dashboard {
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+  }
+}
+
+/* --- Light Mode Override --- */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #f7fafc;
+    --bg-secondary: #e6f2ff;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --border-color: #cbd5e0;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    background: rgba(0,0,0,0.05);
+  }
+  .card-section { border-color: #d97706; }
+  .btn-primary { border-color: #d97706; color: #d97706; }
+  .btn-primary:hover { background: #d97706; color: #fff; }
+}
+
+/* --- Focus States --- */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* --- Hover Effects on Links --- */
+nav a:hover { text-decoration: underline; text-underline-offset: 2px; }
+nav a.active {
+  color: var(--primary);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--primary);
+}
+
+/* --- JS Ecosystem Accent Colors --- */
+h1, h2 { color: var(--primary); }
+.card-section { border-color: var(--primary); }
+.btn-primary { border-color: var(--primary); color: var(--primary); }
